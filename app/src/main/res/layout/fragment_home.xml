@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.activities.MainActivity">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#F5F5F5">
+
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/purple">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <TextView
+                        android:id="@+id/searchview_box"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:background="@drawable/search_background"
+                        android:drawablePadding="10dp"
+                        android:imeOptions="actionDone"
+                        android:importantForAutofill="no"
+                        android:paddingStart="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="TextFields,TouchTargetSizeCheck"
+                        app:drawableStartCompat="@drawable/ic_round_search_24" />
+
+
+                    <ImageView
+                        android:id="@+id/mic_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="5dp"
+                        android:scaleX="1.0"
+                        android:scaleY="1.0"
+                        android:src="@drawable/ic_baseline_mic_24"
+                        app:layout_constraintBottom_toBottomOf="@+id/camera_icon"
+                        app:layout_constraintEnd_toStartOf="@+id/camera_icon"
+                        app:layout_constraintTop_toTopOf="@+id/camera_icon" />
+
+                    <ImageView
+                        android:id="@+id/camera_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"
+                        android:src="@drawable/ic_round_photo_camera_24"
+                        app:layout_constraintBottom_toBottomOf="@+id/searchview_box"
+                        app:layout_constraintEnd_toEndOf="@+id/searchview_box"
+                        app:layout_constraintTop_toTopOf="@+id/searchview_box" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/home_cg_recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="6dp"
+                        android:fitsSystemWindows="true"
+                        android:background="@color/white" />
+                    <ViewFlipper
+                        android:id="@+id/viewFlipper"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:autoStart="true"
+                        android:fitsSystemWindows="true"
+                        android:flipInterval="1000" />
+
+
+
+                    <TextView
+                        android:id="@+id/homepage_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:padding="10dp"
+                        android:text="Deals of the Day"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:ignore="RtlSymmetry"
+                        app:drawableRightCompat="@drawable/ic_baseline_arrow_forward_ios_24" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/home_deals_RV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" />
+
+                    <TextView
+                        android:id="@+id/homepage_text2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:padding="10dp"
+                        android:text="Trending Offers"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:ignore="RtlSymmetry"
+                        app:drawableRightCompat="@drawable/ic_baseline_arrow_forward_ios_24" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/home_trendOff_RV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" />
+
+                    <TextView
+                        android:id="@+id/homepage_text3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:padding="10dp"
+
+                        android:text="Best Sellers"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:ignore="RtlSymmetry"
+                        app:drawableRightCompat="@drawable/ic_baseline_arrow_forward_ios_24" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/home_bestseller_RV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:orientation="horizontal" />
+
+                    <TextView
+                        android:id="@+id/homepage_text4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:padding="10dp"
+                        android:text="Top Deals"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:ignore="RtlSymmetry"
+                        app:drawableRightCompat="@drawable/ic_baseline_arrow_forward_ios_24" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/home_topdeal_RV"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:orientation="horizontal" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/white"/>
+
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="4dp"
+    android:layout_margin="5dp">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cart_relative"
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        app:cardElevation="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/cart_image"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/footware" />
+
+            <ImageView
+                android:id="@+id/cart_delete_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@color/white"
+                android:padding="15dp"
+                android:src="@drawable/ic_baseline_delete_outline_24" />
+
+
+            <TextView
+                android:id="@+id/cart_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@+id/cart_image"
+                android:text="Adidas Mens Sports Shoe"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/cart_product_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cart_name"
+                android:layout_alignStart="@+id/cart_name"
+                android:layout_marginStart="0dp"
+                android:text="$799"
+                android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cart_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cart_product_price"
+                android:layout_alignStart="@+id/cart_product_price"
+                android:elevation="10dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/cart_text3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Size:S"
+                    android:drawableRight="@drawable/round_arrow_drop_down_24"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cart_card2"
+                android:layout_width="60dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/cart_product_price"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:elevation="10dp"
+                android:layout_toEndOf="@+id/cart_card">
+
+                <TextView
+                    android:id="@+id/cart_text4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Qty:1"
+                    android:drawableRight="@drawable/round_arrow_drop_down_24"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/cart_text5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cart_card2"
+                android:layout_alignStart="@+id/cart_card"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="8dp"
+                android:text="Delivery by 26th April 2022"
+                android:textColor="#009688" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
