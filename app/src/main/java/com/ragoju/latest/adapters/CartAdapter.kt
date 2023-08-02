@@ -1,5 +1,6 @@
 package com.ragoju.latest.adapters
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -21,6 +22,7 @@ class CartAdapter(private val ctx: Context, val listener: CartItemClickAdapter):
         return CartViewHolder(cartView)
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: CartViewHolder, position: Int) {
 
 
@@ -41,6 +43,10 @@ class CartAdapter(private val ctx: Context, val listener: CartItemClickAdapter):
         }
     }
 
+
+
+
+
     override fun getItemCount(): Int {
         return cartList.size
     }
@@ -58,6 +64,7 @@ class CartAdapter(private val ctx: Context, val listener: CartItemClickAdapter):
 
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     fun updateList(newList: List<ProductEntity>){
         cartList.clear()
         cartList.addAll(newList)
